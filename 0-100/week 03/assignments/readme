@@ -1,0 +1,35 @@
+This week’s assignments are organized into three main sections:
+
+Middlewares:
+
+Create standard middlewares for your application:
+
+Middleware to log the number of requests on a server.
+
+Middleware for rate-limiting user requests based on their username in the header.
+
+Middleware to log the number of errors on a server.
+
+To test your work, navigate to the 01-middlewares folder and run the command: npx jest ./tests
+
+JWTs:
+
+Write a function to generate a JWT token:
+
+It should take a username and password as input and encode the username into a JWT.
+
+Return null if the username isn’t a valid email or if the password is shorter than six characters (use the zod library for validation).
+
+Write a function to check if a JWT can be decoded:
+
+Input: A JWT.
+
+Output: Return true if it can be decoded (not verified); return false otherwise.
+
+Write a function to verify a JWT:
+
+Input: A JWT.
+
+Output: Return true if it can be verified; return false otherwise.
+
+To test your work, go to the 02-jwt folder and run the command: npx jest ./tests
