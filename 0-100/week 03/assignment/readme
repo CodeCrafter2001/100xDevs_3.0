@@ -1,0 +1,14 @@
+Weekly Assignments
+Middlewares
+Develop several standard middlewares for your application.
+
+Implement middleware to track the total number of requests received by the server.
+
+Create middleware to limit user requests based on their username provided in the header.
+
+Add middleware for monitoring and logging the number of server errors.
+
+To test your work, navigate to the 01-middlewares folder and execute: npx jest ./tests.
+
+
+
