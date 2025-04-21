@@ -394,13 +394,13 @@ npm install zod
         });
 
         const userData = {
-          name: 'Chandan Kushwaha',
+          name: 'anmol bansiwal',
           age: 23,
-          email: 'chandanck22@yahoo.com',
+          email: 'anmolbansiwal018@gmail.com',
           address: {
-            street: '123 Main Road',
-            city: 'New Delhi',
-            zipCode: '12345',
+            street: '1870 preetnagar',
+            city: 'meerut',
+            zipCode: '250401',
           },
         };
 
@@ -463,11 +463,11 @@ npm install zod
         ```jsx
         try {
           const userData = userSchema.parse({
-            username: 'Chandan Kushwaha',
-            age: 25,
+            username: 'anmol bansiwal',
+            age: 21,
             address: {
-              street: '123 Main Road',
-              city: 'New Delhi',
+              street: '1870 preetnagar',
+              city: 'meerut',
             },
           });
           console.log('Parsed data:', userData);
