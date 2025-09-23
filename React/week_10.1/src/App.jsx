@@ -1,35 +1,40 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route, Links    
+ } from "react-router-dom";
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+ return <div>
+<a href='/'> Allen</a>
+|
+<a href='/neet/online-coaching-class-11'> Class 11</a>
+|
+<a href='/neet/online-coaching-class-12'> Class 12</a>
+<BrowserRouter>
+<Routes>
+    <Route path='/neet/online-coaching-class-11' element={<Class11Program/>} />
+    <Route path='/neet/online-coaching-class-12' element={<Class12Program/>} />
+    <Route path='/' element={<Landing/>} />
+</Routes>
+</BrowserRouter>
+ </div>
 }
 
+function Landing(){
+    return <div>
+        Welcome to allen
+    </div>
+}
+
+function Class11Program(){
+    return <div>
+        Neet program for class 11
+    </div>
+}
+
+function Class12Program(){
+    return <div>
+        Neet program for class 12
+    </div>
+}
 export default App
