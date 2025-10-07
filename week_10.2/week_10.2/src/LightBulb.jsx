@@ -1,23 +1,24 @@
-import { useState } from "react";
-
-export default function LightBulb() {
-  const [bulbOn, setBulbOn] = useState(true);
+import { useState ,createContext, useContext} from "react";
+import { BulbContext } from "./App";
+export default function Light() {
 
   return (
     <div>
-      <BulbState bulbOn={bulbOn} />
-      <ToggleBulbState bulbOn={bulbOn} setBulbOn={setBulbOn} />
+      <BulbState />
+      <ToggleBulbState  />
     </div>
   );
 }
 
-function BulbState({ bulbOn }) {
+function BulbState() {
+  const {bulbOn}= useContext(BulbContext)
   return <div>{bulbOn ? "Bulb ON" : "Bulb OFF"}</div>;
 }
 
-function ToggleBulbState({ bulbOn, setBulbOn }) {
+function ToggleBulbState() {
+const {bulbOn, setBulbOn}= useContext(BulbContext);
   function toggle() {
-    setBulbOn(!bulbOn);
+    setBulbOn(prev => !prev);
   }
 
   return (
