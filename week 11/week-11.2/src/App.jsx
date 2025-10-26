@@ -1,4 +1,5 @@
 import { useState , createContext, useContext} from 'react'
+import {RecoilRoot} from "recoil";
 import './App.css' 
 const CountContext= createContext();
 function CountContextProvider({children }){
@@ -9,7 +10,7 @@ return (
 </CountContext.Provider>
 );
 } 
-function Parent(){
+function Parent(){ 
   return (
     <CountContextProvider>
       <Increase/>
@@ -33,9 +34,16 @@ return <p>Count :{ Count}</p>
 }
 function App() {
 
-return  <div>
+return (
+  <>
+  <div className="contextAPI-counter">
+  <p>Counter using context api</p>
 <Parent/>
 </div>
+<div className="recoil-counter"></div>
+<p>counter using Rocoil</p>
+</>
+);
 }
 
 export default App
