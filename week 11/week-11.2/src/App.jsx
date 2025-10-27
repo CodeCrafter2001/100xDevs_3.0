@@ -1,6 +1,8 @@
 import { useState , createContext, useContext} from 'react'
 import {RecoilRoot} from "recoil";
 import './App.css' 
+import { counterAtom } from './store/atoms/counterAtom';
+// context api
 const CountContext= createContext();
 function CountContextProvider({children }){
 const [Count, setCount]= useState(0);
@@ -32,6 +34,9 @@ function Value(){
   const {Count}= useContext(CountContext);
 return <p>Count :{ Count}</p>
 }
+
+// recoil rendering
+
 function App() {
 
 return (
