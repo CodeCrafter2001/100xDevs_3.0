@@ -1,5 +1,6 @@
-import { atom } from "recoil";
-export const counterAtom= atom({
-    default:0,
-    key: "counter"
-})
+import { atom } from 'recoil';
+
+export const counterAtom = atom({
+  key: 'counterAtom', // unique ID
+  default: 0,         // initial value
+});
