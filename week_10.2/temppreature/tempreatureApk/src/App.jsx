@@ -6,7 +6,7 @@ import { farenthiteSelector } from './store/selectors/farenthiteSelector.js'
 import { useRecoilValue, useSetRecoilState } from 'recoil'
 
 //components for displaying tempreature and controling tempreature
-function displayTempreature(){
+function DisplayTempreature(){
   const celsius = useRecoilValue(tempreatureAtom);
   const fahrenheit = useRecoilValue(farenthiteSelector);
   return(
@@ -19,7 +19,7 @@ function displayTempreature(){
     </>
   ); 
 }
-function tempreatureController(){
+function TempreatureController(){
   const setTemp= useSetRecoilState(tempreatureAtom);
   return(
     <div>
@@ -32,8 +32,8 @@ function App() {
   return(
     <>
     <RecoilRoot>
-      <displayTempreature/>
-      <tempreatureController/>
+      <DisplayTempreature/>
+      <TempreatureController/>
     </RecoilRoot>
     </>
   );
