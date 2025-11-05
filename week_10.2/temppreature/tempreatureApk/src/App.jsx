@@ -32,8 +32,12 @@ function App() {
   return(
     <>
     <RecoilRoot>
+      <div>
       <DisplayTempreature/>
+    </div>
+      <div>
       <TempreatureController/>
+    </div>
     </RecoilRoot>
     </>
   );
