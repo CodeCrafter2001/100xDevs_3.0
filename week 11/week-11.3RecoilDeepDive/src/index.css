@@ -1,0 +1,26 @@
+body {
+  background-color: #f0f4f8; /* light gray-blue */
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.div_button {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+.div_button button {
+  background-color: #0073b1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.div_button button:hover {
+  background-color: #023855;
+}
